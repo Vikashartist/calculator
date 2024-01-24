@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+</head>
+<style>
+input{
+  background-color:#85C1E9;
+  border:none;
+  width:212px;
+  height:40px;
+  margin:0px;
+  padding:10px;
+  font-weight:bold;
+  font-size:22px;
+  color:white;
+  box-shadow:0px 0px 4px 1px  black;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  
+}
+  .button-section{
+    background-color:#5DADE2;
+    color:white;
+    width:210px;
+    height:200px;
+    padding:10px;
+    margin:1px;
+    border-radius:10px;
+     box-shadow:1px 1px 8px 1px black;
+  }
+  button{
+    width:40px;
+    background-color:#2E86C1;
+    color:white;
+    padding:10px;
+    margin:4px;
+    border-radius:10px;
+    border:none;
+    box-shadow:1px 2px 3px 1px black;
+    font-size:18px;
+    font-weight:bold;
+  }
+  button:hover:active{
+    background-color:#AED6F1;
+    color:#1A5276;
+     box-shadow:0px 0px 1px 0px black;
+  }
+  h4{
+    background-color:blue;
+    width:240px;
+    height:20px;
+    color:white;
+    padding:10px;
+    border-radius:10px;
+    text-transform:uppercase;
+    letter-spacing:0px;
+  }
+</style>
+
+<body>
+  <header>
+    <h4>Example of calculator</h4>
+  </header>
+  <div>
+    <div>
+      <input type="text"id="display"name="display"><br>
+      <div class="button-section">
+       <button onclick="appendtoo('7')">7</button> 
+       <button onclick="appendtoo('8')">8</button> 
+       <button onclick="appendtoo('9')">9</button> 
+       <button onclick="appendtoo('4')">4</button> 
+       <button onclick="appendtoo('5')">5</button> 
+       <button onclick="appendtoo('6')">6</button> 
+       <button onclick="appendtoo('1')">1</button> 
+       <button onclick="appendtoo('2')">2</button> 
+       <button onclick="appendtoo('3')">3</button> 
+       <button onclick="appendtoo('0')">0</button> 
+       <button onclick="cal()">=</button> 
+       <button onclick="appendtoo('+')">+</button> 
+       <button onclick="appendtoo('-')">-</button> 
+       <button onclick="appendtoo('*')">*</button> 
+       <button onclick="appendtoo('/')">/</button> 
+       <button onclick="clr()">C</button> 
+        
+     
+      </div>
+    </div>
+  </div>
+<script>
+  function appendtoo(value){
+   document.getElementById('display').value+=value; 
+  }
+  function clr(){
+   document.getElementById('display').value=" "; 
+  }
+  function cal(){
+    document.getElementById('display').value=eval(document.getElementById('display').value);
+  }
+</script>
+</body>
+
+</html>
