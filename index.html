@@ -17,7 +17,7 @@ input{
   font-weight:bold;
   font-size:22px;
   color:white;
-  box-shadow:0px 0px 4px 1px  black;
+  box-shadow:0px 0px 4px 3px  black;
   border-top-left-radius:10px;
   border-top-right-radius:10px;
   
@@ -42,12 +42,12 @@ input{
     border:none;
     box-shadow:1px 2px 3px 1px black;
     font-size:18px;
-    font-weight:bold;
+    font-weight:500;
   }
   button:hover:active{
     background-color:#AED6F1;
     color:#1A5276;
-     box-shadow:0px 0px 1px 0px black;
+     box-shadow:0px 0px 1px 4px black;
   }
   h4{
     background-color:blue;
@@ -84,7 +84,7 @@ input{
        <button onclick="appendtoo('-')">-</button> 
        <button onclick="appendtoo('*')">*</button> 
        <button onclick="appendtoo('/')">/</button> 
-       <button onclick="clr()">C</button> 
+       <button onclick="clr()">Clear</button> 
         
      
       </div>
@@ -95,7 +95,7 @@ input{
    document.getElementById('display').value+=value; 
   }
   function clr(){
-   document.getElementById('display').value=" "; 
+   document.getElementById('display').value="  "; 
   }
   function cal(){
     document.getElementById('display').value=eval(document.getElementById('display').value);
